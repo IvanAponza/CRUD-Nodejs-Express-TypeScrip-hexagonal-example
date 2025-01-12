@@ -1,3 +1,4 @@
+import { Server } from "./server";
 
 
 (async() => {
@@ -6,5 +7,5 @@
 
 
 async function main() {
-  console.log('Hello World');
+  new Server().start()
 }
