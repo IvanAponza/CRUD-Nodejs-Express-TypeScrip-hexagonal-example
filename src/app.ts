@@ -2,15 +2,15 @@ import { envs } from "./config/anvs";
 import { AppRoutes, Server } from "./presentation";
 
 
-(async() => {
+(async () => {
     main();
 })();
 
 
 async function main() {
-   const server = new Server({
+    const server = new Server({
         port: envs.PORT,
         routes: AppRoutes.routes,
-   });
-   server.start();
+    });
+    server.start();
 }

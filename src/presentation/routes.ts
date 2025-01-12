@@ -1,4 +1,5 @@
 import express, { Router } from 'express';
+import { AuthRoutes } from './auth/auth-routes';
 
 
 export class AppRoutes {
@@ -6,9 +7,7 @@ export class AppRoutes {
     static get routes(): Router {
         const router = Router();
 
-        router.get('/api/auth', (req, res) => {
-            res.send('Hello world from Ruotes')
-        })
+        router.use('/api/auth', AuthRoutes.routes);
 
         return router;
     }
