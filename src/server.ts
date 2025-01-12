@@ -1,19 +1,27 @@
 import express from 'express';
 
+interface Options {
+    port: number;
+}
+
 
 export class Server {
     
     public readonly app = express();
+    private readonly port: number;
     
-    constructor(){
+    constructor(options: Options){
+        const { port } = options;
+
         this.app = express();
+        this.port = port;
     }
     
     async start(){
         
     
-        this.app.listen(4000, () => {
-            console.log(`[Server] running on port http://localhost:4000`);
+        this.app.listen(this.port, () => {
+            console.log(`[Server] running on port http://localhost:${this.port}`);
         })
 
     }

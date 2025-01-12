@@ -1,3 +1,4 @@
+import { envs } from "./config/anvs";
 import { Server } from "./server";
 
 
@@ -7,5 +8,8 @@ import { Server } from "./server";
 
 
 async function main() {
-  new Server().start()
+  const server = new Server({
+    port: envs.PORT,
+  })
+  server.start()
 }
