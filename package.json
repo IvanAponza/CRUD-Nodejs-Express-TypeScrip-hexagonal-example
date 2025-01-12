@@ -1,0 +1,29 @@
+{
+  "name": "crud-nodejs-express-typescrip-hexagonal-example",
+  "version": "1.0.0",
+  "description": "Example CRUD InMemory with NodeJs, Express, TypeScript Clean Arquitecture.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build":"rimraf ./dist && tsc",
+    "start":"npm run build && node dist/app.js"
+
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "typescript",
+    "clean arquitecture",
+    "hexagonal",
+    "crud",
+    "inmemory"
+  ],
+  "author": "Ivan Aponza",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "rimraf": "^5.0.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
